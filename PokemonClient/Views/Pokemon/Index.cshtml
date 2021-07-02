@@ -1,0 +1,23 @@
+@using PokemonClient.Models
+
+@{
+	Layout = "_Layout";
+}
+
+<h1 id="title">Pokemon</h1>
+
+<hr />
+<ol>
+	@foreach (Pokemon pokemon in Model)
+	{
+		<ul>
+			<li>ID: @pokemon.PokemonId</li>
+			<li>Name: @pokemon.Name</li>
+			<li>Description: @pokemon.Description</li>
+		</ul>
+		<a href="/Pokemon/Details/@(pokemon.PokemonId)">
+			<p>View Details</p>
+		</a>
+		<br>
+	}
+</ol>
