@@ -7,13 +7,14 @@ namespace PokemonClient.Controllers
 	public class PokemonController : Controller
 	{
 		// GET version/pokemon
-		[Route("api/{version}/pokemon")]
+		[Route("{version}/pokemon")]
 		public IActionResult Index()
 		{
 			List<Pokemon> allPokemon = Pokemon.GetPokemon();
 			return View(allPokemon);
 		}
 
+		[Route("{version}/pokemon/details/{id}")]
 		public IActionResult Details(int id)
 		{
 			Pokemon pokemon = Pokemon.GetDetails(id);
