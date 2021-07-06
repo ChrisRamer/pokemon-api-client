@@ -23,5 +23,16 @@ namespace PokemonClient.Models
 
 			return pokemonList;
 		}
+
+		public static Pokemon GetDetails(int id)
+		{
+			Task<string> apiCallTask = ApiHelper.Get(id);
+			string result = apiCallTask.Result;
+
+			JObject jsonResponse = JsonConvert.DeserializeObject<JObject>(result);
+			Pokemon pokemon = JsonConvert.DeserializeObject<Pokemon>(jsonResponse.ToString());
+
+			return pokemon;
+		}
 	}
 }

@@ -13,5 +13,11 @@ namespace PokemonClient.Controllers
 			List<Pokemon> allPokemon = Pokemon.GetPokemon();
 			return View(allPokemon);
 		}
+
+		public IActionResult Details(int id)
+		{
+			Pokemon pokemon = Pokemon.GetDetails(id);
+			return View(pokemon);
+		}
 	}
 }

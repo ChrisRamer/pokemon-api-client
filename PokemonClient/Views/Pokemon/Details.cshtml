@@ -1,0 +1,20 @@
+@model PokemonClient.Models.Pokemon
+
+@{
+	Layout = "_Layout";
+}
+
+<h1 id="title">Pokemon Details</h1>
+
+<hr />
+
+<p>
+	<u><h3>#@Model.PokemonId: @Model.Name</h3></u>
+	<h4>@Model.Description</h4>
+</p>
+
+<hr />
+
+<p>
+	@Html.ActionLink("Home", "Index", "Home")
+</p>
