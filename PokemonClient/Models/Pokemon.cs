@@ -16,8 +16,6 @@ namespace PokemonClient.Models
 			Task<string> apiCallTask = ApiHelper.GetAll();
 			string result = apiCallTask.Result;
 
-			System.Console.WriteLine("Result: " + result);
-
 			JArray jsonResponse = JsonConvert.DeserializeObject<JArray>(result);
 			List<Pokemon> pokemonList = JsonConvert.DeserializeObject<List<Pokemon>>(jsonResponse.ToString());
 

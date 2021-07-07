@@ -11,13 +11,15 @@
 	@foreach (Pokemon pokemon in Model)
 	{
 		<ul>
-			<li>ID: @pokemon.PokemonId</li>
-			<li>Name: @pokemon.Name</li>
-			<li>Description: @pokemon.Description</li>
+				<li>
+					@Html.ActionLink($"#{@pokemon.PokemonId}: {@pokemon.Name}", "Details", "Pokemon", new { id = pokemon.PokemonId, version = 1 })
+				</li>
 		</ul>
-		<a href="/1/Pokemon/Details/@(pokemon.PokemonId)">
-			<p>View Details</p>
-		</a>
-		<br>
 	}
 </ol>
+
+<hr />
+
+<p>
+	@Html.ActionLink("Home", "Index", "Home")
+</p>
