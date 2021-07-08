@@ -6,6 +6,13 @@
 
 <hr />
 
+@using (Html.BeginForm())
+{
+	@Html.Label("API Version")
+	<br>
+	@Html.DropDownList("VersionList")
+}
+
 <p>
 	@Html.ActionLink("View all Pokemon", "Index", "Pokemon", new { version = 1 } )
 </p>
