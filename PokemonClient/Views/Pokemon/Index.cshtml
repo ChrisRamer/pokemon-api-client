@@ -12,7 +12,7 @@
 	{
 		<ul>
 				<li>
-					@Html.ActionLink($"#{@pokemon.PokemonId}: {@pokemon.Name}", "Details", "Pokemon", new { id = pokemon.PokemonId, version = 1 })
+					@Html.ActionLink($"#{@pokemon.PokemonId}: {@pokemon.Name}", "Details", "Pokemon", new { id = pokemon.PokemonId, version = @ApiHelper.ApiVersion })
 				</li>
 		</ul>
 	}

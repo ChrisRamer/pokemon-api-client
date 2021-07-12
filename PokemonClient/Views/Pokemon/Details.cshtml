@@ -1,3 +1,4 @@
+@using PokemonClient.Models
 @model PokemonClient.Models.Pokemon
 
 @{
@@ -18,5 +19,5 @@
 <p>
 	@Html.ActionLink("Home", "Index", "Home")
 	|
-	@Html.ActionLink("View all Pokemon", "Index", "Pokemon", new { version = 1 })
+	@Html.ActionLink("View all Pokemon", "Index", "Pokemon", new { version = @ApiHelper.ApiVersion })
 </p>
