@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 
 namespace PokemonClient.Models
 {
-	class ApiHelper
+	public class ApiHelper
 	{
 		static double apiVersion = 1;
 		public static double ApiVersion
