@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using PokemonClient.Models;
 using System.Collections.Generic;
 
 namespace PokemonClient.Controllers
@@ -22,6 +23,14 @@ namespace PokemonClient.Controllers
 			});
 			ViewBag.VersionList = versions;
 			return View();
+		}
+
+		[HttpPost("/")]
+		public ActionResult Index(SelectListItem test)
+		{
+			double version = double.Parse(Request.Form["VersionList"]);
+			ApiHelper.ApiVersion = version;
+			return RedirectToAction("Index", "Pokemon", new { version = version });
 		}
 	}
 }

@@ -10,9 +10,7 @@
 {
 	@Html.Label("API Version")
 	<br>
-	@Html.DropDownList("VersionList")
+	@Html.DropDownList("VersionList");
+	<br>
+	<input type="submit" value="Use version" class="btn btn-default" />
 }
-
-<p>
-	@Html.ActionLink("View all Pokemon", "Index", "Pokemon", new { version = 1 } )
-</p>

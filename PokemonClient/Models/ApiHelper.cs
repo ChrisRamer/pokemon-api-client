@@ -5,8 +5,8 @@ namespace PokemonClient.Models
 {
 	class ApiHelper
 	{
-		static int apiVersion = 1;
-		public static int ApiVersion
+		static double apiVersion = 1;
+		public static double ApiVersion
 		{
 			get
 			{
